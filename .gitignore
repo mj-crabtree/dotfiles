@@ -1,4 +1,3 @@
-vim/.vim/pack/plugins/**
-vim/.vim/plugged/**
+vim/.vim/**
 *.swp
 *.db
