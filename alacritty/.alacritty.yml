@@ -1,7 +1,7 @@
 font:
   normal:
   # use $ fc-match <name of font> -s to find the right name
-    family: CaskaydiaCove NF
+    family: Iosevka
     
 selection:
   save_to_clipboard: true
