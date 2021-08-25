@@ -1,20 +1,20 @@
 font:
   normal:
-  # use $ fc-match <name of font> -s to find the right name
+    # use $ fc-match <name of font> -s to find the right name
     family: Iosevka
-    
+
 selection:
   save_to_clipboard: true
-  
+
 mouse_bindings:
   - { mouse: Right, action: PasteSelection }
-  
+
 scrolling:
   history: 10000
-  
+
 cursor:
   style:
-    shape: Block 
+    shape: Block
 
 shell:
   program: /bin/zsh
@@ -23,46 +23,110 @@ shell:
     - -c
     - "tmux attach || tmux"
 
-# Base16 Gruvbox dark, hard 256 - alacritty color config
-# Dawid Kurek (dawikur@gmail.com), morhetz (https://github.com/morhetz/gruvbox)
-colors:
-  # Default colors
-  primary:
-    background: '0x1d2021'
-    foreground: '0xd5c4a1'
+schemes:
+  onehalflight: &onehalflight
+    primary:
+      background: '0xfafafa'
+      foreground: '0x383a42'
 
-  # Colors the cursor will use if `custom_cursor_colors` is true
-  cursor:
-    text: '0x1d2021'
-    cursor: '0xd5c4a1'
+    normal:
+      black: '0x383a42'
+      red: '0xe45649'
+      green: '0x50a14f'
+      yellow: '0xc18401'
+      blue: '0x0184bc'
+      magenta: '0xa626a4'
+      cyan: '0x0997b3'
+      white: '0xfafafa'
 
-  # Normal colors
-  normal:
-    black:   '0x1d2021'
-    red:     '0xfb4934'
-    green:   '0xb8bb26'
-    yellow:  '0xfabd2f'
-    blue:    '0x83a598'
-    magenta: '0xd3869b'
-    cyan:    '0x8ec07c'
-    white:   '0xd5c4a1'
+    bright:
+      black: '0x383a42'
+      red: '0xe45649'
+      green: '0x50a14f'
+      yellow: '0xc18401'
+      blue: '0x0184bc'
+      magenta: '0xa626a4'
+      cyan: '0x0997b3'
+      white: '0xfafafa'
 
-  # Bright colors
-  bright:
-    black:   '0x665c54'
-    red:     '0xfb4934'
-    green:   '0xb8bb26'
-    yellow:  '0xfabd2f'
-    blue:    '0x83a598'
-    magenta: '0xd3869b'
-    cyan:    '0x8ec07c'
-    white:   '0xfbf1c7'
+  onehalfdark:  &onehalfdark
+    primary:
+      background: '0x282c34'
+      foreground: '0xdcdfe4'
 
-  indexed_colors:
-    - { index: 16, color: '0xfe8019' }
-    - { index: 17, color: '0xd65d0e' }
-    - { index: 18, color: '0x3c3836' }
-    - { index: 19, color: '0x504945' }
-    - { index: 20, color: '0xbdae93' }
-    - { index: 21, color: '0xebdbb2' }
+    normal:
+      black: '0x282c34'
+      red: '0xe06c75'
+      green: '0x98c379'
+      yellow: '0xe5c07b'
+      blue: '0x61afef'
+      magenta: '0xc678dd'
+      cyan: '0x56b6c2'
+      white: '0xdcdfe4'
+
+    bright:
+      black: '0x282c34'
+      red: '0xe06c75'
+      green: '0x98c379'
+      yellow: '0xe5c07b'
+      blue: '0x61afef'
+      magenta: '0xc678dd'
+      cyan: '0x56b6c2'
+      white: '0xdcdfe4'
+
+  gruvbox_light: &gruvbox_light
+    primary:
+      # hard contrast: background: '0xf9f5d7'
+      # medium contrast: background: '0xfbf1c7'
+      background: '0xf2e5bc'
+      foreground: '0x3c3836'
+
+    normal:
+      black:   '0xfbf1c7'
+      red:     '0xcc241d'
+      green:   '0x98971a'
+      yellow:  '0xd79921'
+      blue:    '0x458588'
+      magenta: '0xb16286'
+      cyan:    '0x689d6a'
+      white:   '0x7c6f64'
+
+    bright:
+      black:   '0x928374'
+      red:     '0x9d0006'
+      green:   '0x79740e'
+      yellow:  '0xb57614'
+      blue:    '0x076678'
+      magenta: '0x8f3f71'
+      cyan:    '0x427b58'
+      white:   '0x3c3836'
+
+  gruvbox_dark: &gruvbox
+    primary:
+      # hard contrast: background: '0x1d2021'
+      # medium contrast: background: '0x282828'
+      background: '0x32302f'
+      foreground: '0xebdbb2'
+
+    normal:
+      black:   '0x282828'
+      red:     '0xcc241d'
+      green:   '0x98971a'
+      yellow:  '0xd79921'
+      blue:    '0x458588'
+      magenta: '0xb16286'
+      cyan:    '0x689d6a'
+      white:   '0xa89984'
+
+    bright:
+      black:   '0x928374'
+      red:     '0xfb4934'
+      green:   '0xb8bb26'
+      yellow:  '0xfabd2f'
+      blue:    '0x83a598'
+      magenta: '0xd3869b'
+      cyan:    '0x8ec07c'
+      white:   '0xebdbb2'
+
+colors: *gruvbox
 
