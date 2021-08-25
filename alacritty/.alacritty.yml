@@ -16,6 +16,13 @@ cursor:
   style:
     shape: Block 
 
+shell:
+  program: /bin/zsh
+  args:
+    - -l
+    - -c
+    - "tmux attach || tmux"
+
 # Base16 Gruvbox dark, hard 256 - alacritty color config
 # Dawid Kurek (dawikur@gmail.com), morhetz (https://github.com/morhetz/gruvbox)
 colors:
