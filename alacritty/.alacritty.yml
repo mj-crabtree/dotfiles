@@ -1,3 +1,12 @@
+# window decorations
+window:
+  decorations: none
+  startup_mode: Fullscreen
+
+# ensuring bold fonts are clearer
+draw_bold_text_with_bright_colors: true
+
+# font configurations
 font:
   normal:
     # use $ fc-match <name of font> -s to find the right name
@@ -105,7 +114,7 @@ schemes:
     primary:
       # hard contrast: background: '0x1d2021'
       # medium contrast: background: '0x282828'
-      background: '0x32302f'
+      background: '0x282828'
       foreground: '0xebdbb2'
 
     normal:

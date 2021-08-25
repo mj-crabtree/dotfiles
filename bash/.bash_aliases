@@ -28,12 +28,6 @@ alias gx='gitx --all'
 alias got='git '
 alias get='git '
 
-# vim aliases
-alias vplug='cd ~.vim/pack/vendor/start/'
-
-# dotfile repo config
-alias dotfiles='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
-
 # newsboat rss
 alias newsboat-add='function add_rss(){echo "$1" >> $HOME/.newsboat/urls};add_rss'
 alias newsboat-edit='code $HOME/.newsboat/urls'
@@ -43,13 +37,11 @@ alias rss='newsboat'
 alias cop="xclip -i"
 alias ps="xclip -o"
 
-# terminator help
-alias tmo='less $HOME/bin/terminator-options'
-alias tmk='less $HOME/bin/terminator-keybinds'
-
 # conda aliases
 alias cona='conda activate'
 alias conx='conda deactivate'
 
 # vim aliases
 alias v='vim'
+alias vplug='cd ~.vim/pack/vendor/start/'
+
