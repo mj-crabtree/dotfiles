@@ -1,9 +1,25 @@
 set nocompatible " not vi compatible
 
-syntax on
+syntax enable
 set autoindent
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set expandtab
+filetype indent on
+set wildmenu
+set lazyredraw
+set incsearch
+set hlsearch
+set foldenable
+set foldlevelstart=10
+set foldmethod=indent
 
-:set number
+set cursorline
+set showmatch
+let python_highlight_all=1
+set number
+
 :augroup numbertoggle
 :  autocmd!
 :  autocmd BufEnter,FocusGained,InsertLeave,WinEnter * if &nu && mode() != "i" | set rnu   | endif
@@ -15,14 +31,16 @@ call plug#begin(has('nvim') ? stdpath('data') . '/plugged' : '~/.vim/plugged')
 
 " Declare the list of plugins.
 Plug 'tpope/vim-sensible'
-Plug 'junegunn/seoul256.vim'
 Plug 'preservim/nerdtree'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'morhetz/gruvbox'
 
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
 
 colorscheme gruvbox
+let g:airline_powerline_fonts = 1
 
 set background=dark
 
@@ -33,3 +51,22 @@ nnoremap <silent> coh :call gruvbox#hls_toggle()<CR>
 nnoremap * :let @/ = ""<CR>:call gruvbox#hls_show()<CR>*
 nnoremap / :let @/ = ""<CR>:call gruvbox#hls_show()<CR>/
 nnoremap ? :let @/ = ""<CR>:call gruvbox#hls_show()<CR>?
+
+" space closes folds
+nnoremap <space> za		
+
+" VERY controversial keybindings ooo
+nnoremap B ^
+nnoremap E $
+nnoremap ^ <nop>
+nnoremap $ <nop>
+inoremap jk <esc>
+
+" Start NERDTree when Vim is started without file arguments
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists('s:std_in') | NERDTree | endif
+
+ " some more nerdtree stuff
+nnoremap <C-n> :NERDTreeFocus<CR>
+nnoremap <C-t> :NERDTreeToggle<CR>
+nnoremap <C-f> :NERDTreeFind<CR>
