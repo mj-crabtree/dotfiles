@@ -1,31 +1,44 @@
 set nocompatible " not vi compatible
 
-syntax enable
-set autoindent
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
-set expandtab
+" general environment things
 filetype indent on
-set wildmenu
-set lazyredraw
-set incsearch
-set hlsearch
+let python_highlight_all=1
+set autoindent
+set cursorline
+set expandtab
+set exrc
 set foldenable
 set foldlevelstart=10
 set foldmethod=indent
-
-set cursorline
-set showmatch
-let python_highlight_all=1
+set hidden
+set hlsearch
+set incsearch
+set incsearch
+set lazyredraw
+set nobackup
+set noerrorbells
+set nohlsearch
+set noswapfile
+set nowrap
 set number
+set scrolloff=8
+set shiftwidth=4
+set showmatch
+set signcolumn=yes
+set softtabstop=4
+set tabstop=4
+set wildmenu
+set wildmenu
+syntax enable
 
+" toggling, absolute in insert, relative in normal
 :augroup numbertoggle
 :  autocmd!
 :  autocmd BufEnter,FocusGained,InsertLeave,WinEnter * if &nu && mode() != "i" | set rnu   | endif
 :  autocmd BufLeave,FocusLost,InsertEnter,WinLeave   * if &nu                  | set nornu | endif
 :augroup END%s/\s\+$%s/\s\+$
 
+" Plugin management begins
 " Plugins will be downloaded under the specified directory.
 call plug#begin(has('nvim') ? stdpath('data') . '/plugged' : '~/.vim/plugged')
 
@@ -41,9 +54,9 @@ call plug#end()
 
 colorscheme gruvbox
 let g:airline_powerline_fonts = 1
-
 set background=dark
 
+" keybindings
 nnoremap <silent> [oh :call gruvbox#hls_show()<CR>
 nnoremap <silent> ]oh :call gruvbox#hls_hide()<CR>
 nnoremap <silent> coh :call gruvbox#hls_toggle()<CR>
@@ -66,7 +79,7 @@ inoremap jk <esc>
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists('s:std_in') | NERDTree | endif
 
- " some more nerdtree stuff
+" NERDTree keybindings
 nnoremap <C-n> :NERDTreeFocus<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
 nnoremap <C-f> :NERDTreeFind<CR>
