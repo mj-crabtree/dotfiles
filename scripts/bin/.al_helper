@@ -1,0 +1,44 @@
+ _               _             _ _                     
+| |__   __ _ ___| |__     __ _| (_) __ _ ___  ___  ___ 
+| '_ \ / _` / __| '_ \   / _` | | |/ _` / __|/ _ \/ __|
+| |_) | (_| \__ \ | | | | (_| | | | (_| \__ \  __/\__ \
+|_.__/ \__,_|___/_| |_|  \__,_|_|_|\__,_|___/\___||___/
+                                                       
+-------------------------------------------------------
+-------------------------------------------------------
+
+list aliases
+    laa:        less $HOME/bin/.al_helper
+    ll:         ls -alhF --group-directories-first --color=auto
+    la:         ls -A --group-directories-first --color=auto
+    l:          ls -CF --group-directories-first --color=auto
+    ls:         ls --group-directories-first --color=auto
+
+bash aliases
+    update:     sudo apt-get update && sudo apt-get upgrade -y
+    install:    sudo apt-get install -y
+    brl:        exec bash
+
+terminal help
+    tmo:        less $HOME/bin/terminator-options
+    tmk:        less $HOME/bin/terminator-keybinds
+
+git aliases
+    gs:         git status
+    ga:         git add
+    gb:         git branch
+    gc:         git commit
+    gd:         git diff
+    gco:        git checkout
+    gk:         gitk --all&
+    gx:         gitx --all
+    got:        git 
+    get:        git 
+
+dotfile repo config
+    dotfiles:   /usr/bin/git --git-dir: $HOME/.cfg/ --work-tree: $HOME
+
+newsboat rss
+    newsboat-add:   function add_rss(){echo "$1" >> $HOME/.newsboat/urls};add_rss
+    newsboat-edit:  code $HOME/.newsboat/urls
+    rss:            newsboat

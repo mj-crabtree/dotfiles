@@ -1,0 +1,79 @@
+OPTIONS
+       This  program  follow  the usual GNU command line syntax, with long options starting with two dashes (`-').  A
+       summary of options is included below.
+
+       -h, --help
+              Show summary of options
+
+       -v, --version
+              Show the version of the Terminator installation
+
+       -m, --maximise
+              Start with a maximised window -M, --maximize Start with a maximized window
+
+       -f, --fullscreen
+              Start with a fullscreen window
+
+       -b, --borderless
+              Instruct the window manager not to render borders/decoration on the Terminator window (this works  well
+              with -m)
+
+       -H, --hidden
+              Hide  the  Terminator  window  by  default. Its visibility can be toggled with the hide_window keyboard
+              shortcut (Ctrl-Shift-Alt-a by default)
+
+       -T, --title
+              Force the Terminator window to use a specific name rather than updating it  dynamically  based  on  the
+              wishes of the child shell.
+
+       --geometry=GEOMETRY
+              Specifies the preferred size and position of Terminator's window; see X(7).
+
+       -e, --command=COMMAND
+              Runs  the specified command instead of your default shell or profile specified command. Note: if Termi‐
+              nator is launched as x-terminal-emulator -e behaves like -x, and the longform  becomes  --execute2=COM‐
+              MAND
+
+       -x, --execute COMMAND [ARGS]
+              Runs the rest of the command line instead of your default shell or profile specified command.
+
+       --working-directory=DIR
+              Set the terminal's working directory
+
+       -g, --config FILE
+              Use the specified FILE for configuration
+
+       -r, --role=ROLE
+              Set a custom WM_WINDOW_ROLE property on the window
+
+       -l, --layout=LAYOUT
+              Start Terminator with a specific layout. The argument here is the name of a saved layout.
+
+       -s, --select-layout=LAYOUT
+              Open the layout launcher window instead of the normal terminal.
+
+       -p, --profile=PROFILE
+              Use a different profile as the default
+
+       -i, --icon=FORCEDICON
+              Set a custom icon for the window (by file or name)
+
+       -u, --no-dbus
+              Disable DBus
+
+       -d, --debug
+              Enable  debugging output (please use this when reporting bugs). This can be specified twice to enable a
+              built-in python debugging server.
+
+       --debug-classes=DEBUG_CLASSES
+              If this is specified as a comma separated list, debugging output will only be printed from  the  speci‐
+              fied classes.
+
+       --debug-methods=DEBUG_METHODS
+              If  this  is specified as a comma separated list, debugging output will only be printed from the speci‐
+              fied functions. If this is specified in addition to --debug-classes, only the intersection of  the  two
+              lists will be displayed
+
+       --new-tab
+              If  this  is  specified  and Terminator is already running, DBus will be used to spawn a new tab in the
+              first Terminator window.
