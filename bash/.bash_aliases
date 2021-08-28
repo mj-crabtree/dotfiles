@@ -45,3 +45,7 @@ alias conx='conda deactivate'
 alias v='vim'
 alias vplug='cd ~.vim/pack/vendor/start/'
 
+# ssh
+alias desk="ssh mc@192.168.1.138"
+alias think="ssh mc@192.168.1.129"
+alias feral="ssh cohaagen@thoas.feralhosting.com"
