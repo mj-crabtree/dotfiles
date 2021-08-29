@@ -11,6 +11,7 @@ set noerrorbells
 set nohlsearch
 set noswapfile
 set number
+set ruler
 set scrolloff=8
 set shiftwidth=4
 set showmatch
@@ -43,7 +44,8 @@ nnoremap $ <nop>
 call plug#begin(has('nvim') ? stdpath('data') . '/plugged' : '~/.vim/plugged')
 
 Plug 'airblade/vim-gitgutter'
-Plug 'haishanh/night-owl.vim'
+" Plug 'haishanh/night-owl.vim'
+Plug 'dracula/vim'
 Plug 'tpope/vim-sensible'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -55,6 +57,6 @@ if (has("termguicolors"))
 endif"
 
 syntax enable
-let g:airline_theme='night_owl'
+let g:airline_theme='dracula'
 let g:airline_powerline_fonts = 1
-colorscheme night-owl"
+colorscheme dracula 
