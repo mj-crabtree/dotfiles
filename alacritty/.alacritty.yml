@@ -6,8 +6,13 @@ draw_bold_text_with_bright_colors: false
 
 # window configuration
 window:
-  decorations: none
+  padding: 
+    x: 5
+    y: 5
+  decorations: None
   startup_mode: Maximized
+  opacity: 0.55
+
 # font configurations
 font:
   normal:
@@ -29,11 +34,11 @@ cursor:
     shape: Block 
     
 shell:
-  program: /bin/zsh
-  args:
-    - -l
-    - -c
-    - "tmux attach || tmux"
+ program: /bin/zsh
+ args:
+   - -l
+   - -c
+   - "tmux attach || tmux"
 
 import:
   - ~/.config/alacritty/themes/dracula.yml 

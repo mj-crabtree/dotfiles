@@ -3,8 +3,9 @@
 	email = m.crabtree@zohomail.eu
 [core]
 	excludesfile = ~/.gitignore
-	autocrlf = input
+	autocrlf = false
 	safecrlf = true
+	eol = lf
 [init]
 	defaultBranch = master
 

@@ -105,9 +105,6 @@ if [ ! -d "$HOME/.cache/zsh" ]; then
     mkdir -p $HOME/.cache/zsh
 fi
 
-# SSH
-export SSH_KEY_PATH="~/.ssh/id_ed25519"
-
 #aliases
 source ~/.bash_aliases
 

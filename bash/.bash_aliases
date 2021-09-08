@@ -5,6 +5,13 @@ alias la='ls -A --group-directories-first --color=auto'
 alias l='ls -CF --group-directories-first --color=auto'
 alias ls='ls --group-directories-first --color=auto'
 
+# shell scripts
+# creates an executable file in the current directory
+alias mkf='bash ~/bin/make-file.sh'
+
+# quality of life improvements
+alias n='nautilus . &'
+
 # dir colours
 alias dir='dir --color=auto'
 alias vdir='vdir --color=auto'
