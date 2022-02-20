@@ -10,8 +10,7 @@ window:
     x: 5
     y: 5
   decorations: None
-  startup_mode: Maximized
-  opacity: 0.55
+  startup_mode: Windowed 
 
 # font configurations
 font:
@@ -42,4 +41,3 @@ shell:
 
 import:
   - ~/.config/alacritty/themes/dracula.yml 
-

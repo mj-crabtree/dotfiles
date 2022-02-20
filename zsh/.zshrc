@@ -70,7 +70,7 @@ ZSH_THEME="gentoo"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git ssh-agent conda-zsh-completion zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(git conda-zsh-completion zsh-autosuggestions zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -123,4 +123,21 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+export TLDR_HEADER='magenta bold underline'
+export TLDR_QUOTE='italic'
+export TLDR_DESCRIPTION='green'
+export TLDR_CODE='red'
+export TLDR_PARAM='blue'
+
 export PATH=/home/mc/bin:$PATH
+export JAVA_HOME=/usr/lib/jvm/jdk-17
+export PATH=$PATH:$JAVA_HOME/bin
+
+
+#MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

@@ -11,7 +11,7 @@ alias mkf='bash ~/bin/make-file.sh'
 
 # quality of life improvements
 alias n='nautilus . &'
-
+alias agu='sudo apt-get update && sudo apt-get upgrade -y'
 # dir colours
 alias dir='dir --color=auto'
 alias vdir='vdir --color=auto'
@@ -42,7 +42,6 @@ alias rss='newsboat'
 
 # xclip
 alias cop="xclip -i"
-alias ps="xclip -o"
 
 # conda aliases
 alias cona='conda activate'

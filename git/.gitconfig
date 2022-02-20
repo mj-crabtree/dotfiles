@@ -1,13 +1,13 @@
 [user]
 	name = Matt Crabtree
-	email = m.crabtree@zohomail.eu
+	email = 66781848+mj-crabtree@users.noreply.github.com
 [core]
-	excludesfile = ~/.gitignore
+	excludesFile = ~/.gitignore
 	autocrlf = false
 	safecrlf = true
 	eol = lf
 [init]
-	defaultBranch = master
+	defaultBranch = main
 
 # see also ~/.bash_aliases for more ... aliases
 [alias]
@@ -34,3 +34,8 @@
     added = yellow
     changed = green
     untracked = cyan
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
