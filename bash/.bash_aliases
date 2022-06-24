@@ -1,9 +1,16 @@
 # list aliases
-alias laa='less $HOME/bin/.al_helper'
-alias ll='ls -alhF --group-directories-first --color=auto'
-alias la='ls -A --group-directories-first --color=auto'
-alias l='ls -CF --group-directories-first --color=auto'
-alias ls='ls --group-directories-first --color=auto'
+# alias laa='less $HOME/bin/.al_helper'
+# alias ll='ls -alhF --group-directories-first --color=auto'
+# alias la='ls -A --group-directories-first --color=auto'
+# alias l='ls -CF --group-directories-first --color=auto'
+# alias ls='ls --group-directories-first --color=auto'
+
+# exa aliases (ls replacement)
+alias laa='cat $HOME/bin/.al_helper'
+alias lah='exa -alhF --group-directories-first --color=auto --icons'
+alias la='exa - --group-directories-first --color=auto --icons'
+alias ls='exa --group-directories-first --color=auto'
+alias lsd='exa -alhF --only-dirs'
 
 # shell scripts
 # creates an executable file in the current directory
@@ -55,3 +62,6 @@ alias vplug='cd ~.vim/pack/vendor/start/'
 alias desk="ssh mc@192.168.1.138"
 alias think="ssh mc@192.168.1.129"
 alias feral="ssh cohaagen@thoas.feralhosting.com"
+
+#bat
+alias cat='batcat'
